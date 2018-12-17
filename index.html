@@ -12,11 +12,9 @@
 		<h1>See more with us!</h1>
 	</header>
 	<nav>
-		<ul>
-			<li>About Us</li>
-			<li>Gallery</li>
-			<li>Contact</li>
-		</ul>
+		<button class="link" id="defaultOpen" onclick="openSection(event, 'about_us')">About Us</button>
+		<button class="link" onclick="openSection(event, 'photos')">Gallery</button>
+		<button class="link" onclick="openSection(event, 'getInTouch')">Contact</button>
 	</nav>
 	<section class="about link-content" id="about_us">
 		<h2>About Us</h2>
@@ -40,9 +38,11 @@
 			</div>
 		</div>
 	</section>
-	<section class="contact">
+	<section class="contact link-content" id="getInTouch">
 		<form>
-			
+			<input type="text" placeholder="Name">
+			<input type="text" placeholder="Topic">
+			<textarea></textarea>
 		</form>
 	</section>
 	<script type="text/javascript" src="js/script.js"></script>
