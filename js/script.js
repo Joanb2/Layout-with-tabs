@@ -17,3 +17,30 @@ function openSection(event, sectionName) {
 
 document.getElementById('defaultOpen').click();
 
+//Scroll Down
+
+function scrollDown(element) {
+	window.scroll({
+		behavior: 'smooth',
+		left: 0,
+		top: element.offsetTop
+	});
+}
+
+document.getElementById('scrollDown').addEventListener('click', function() {
+	scrollDown(document.getElementById('nav'));
+});
+
+//Slides
+
+var current = 0;
+var slides = document.getElementsByClassName('img_slides');
+
+setInterval(function() {
+	for (var i = 0; i < slides.length; i++) {
+		slides[i].style.opacity = 0;
+	}
+	current = (current != slides.length - 1) ? current + 1 : 0;
+	slides[current].style.opacity = 1;
+}, 3000);
+

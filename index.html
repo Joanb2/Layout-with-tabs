@@ -11,27 +11,80 @@
 <body>
 	<header>
 		<h1>See more with us!</h1>
+		<i class="fas fa-arrow-down" id="scrollDown"></i>
 	</header>
-	<nav>
-		<button class="link" id="defaultOpen" onclick="openSection(event, 'about_us')">About Us</button>
+	<nav id="nav">
+		<button class="link" id="defaultOpen" onclick="openSection(event, 'about_us')">About us</button>
 		<button class="link" onclick="openSection(event, 'photos')">Gallery</button>
 		<button class="link" onclick="openSection(event, 'getInTouch')">Contact</button>
 	</nav>
 	<section class="about link-content" id="about_us">
-		<h2>About Us</h2>
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-lg-12">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent at turpis eu mauris cursus semper. Aliquam fermentum sem in enim porta mollis. Nam id tortor eu justo rhoncus condimentum. Integer commodo ante sed lectus faucibus volutpat. Mauris nunc nisi, finibus sit amet vehicula et, finibus at ipsum. Nullam aliquam sem eget faucibus tincidunt.</p></br>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent at turpis eu mauris cursus semper. Aliquam fermentum sem in enim porta mollis. Nam id tortor eu justo rhoncus condimentum. Integer commodo ante sed lectus faucibus volutpat.</p>
+		<h2>About our work</h2>
+		<div class="desc">		
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent at turpis eu mauris cursus semper. Aliquam fermentum sem in enim porta mollis. Nam id tortor eu justo rhoncus condimentum. Integer commodo ante sed lectus faucibus volutpat. Mauris nunc nisi, finibus sit amet vehicula et, finibus at ipsum. Nullam aliquam sem eget faucibus tincidunt.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent at turpis eu mauris cursus semper. Aliquam fermentum sem in enim porta mollis. Nam id tortor eu justo rhoncus condimentum. Integer commodo ante sed lectus faucibus volutpat.</p>
+			<div class="quote">
+				<p>"Iquam fermentum sem in enim porta mollis. Nam id tortor eu justo rhoncus condimentum."</p>
+			</div>
+		</div>
+		<div class="offer">
+			<h3>What do we offer?</h3>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-6 col-md-12 col-sm-12">
+						<div class="details">
+							<h4>Pictures</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>Praesent at turpis eu mauris cursus semper.</p>
+							<h4>Video</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>Praesent at turpis eu mauris cursus semper.</p>
+							<h4>Creativity</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>Praesent at turpis eu mauris cursus semper.</p>
+							<span>100% Professionalism in every detail</span>
+						</div>		
+					</div>
+					<div class="col-lg-6 col-md-12 col-sm-12">
+						<div class="offer_img">		
+							<img src="images/slide1.jpeg" alt="slide1" class="img_slides">
+							<img src="images/slide2.jpg" alt="slide2" class="img_slides">
+							<img src="images/slide3.jpg" alt="slide3" class="img_slides">
+							<img src="images/slide4.jpg" alt="slide4" class="img_slides">
+						</div>
+					</div>
 				</div>
+			</div>
+		</div>
+		<div class="facts">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-4 col-md-4">
+						<div class="fact">
+							<i class="far fa-smile-beam"></i>
+							<h4>128</h4>
+							<p>Happy Clients</p>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-4">
+						<div class="fact">
+							<i class="fas fa-camera-retro"></i>
+							<h4>11,545</h4>
+							<p>Token Pictures</p>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-4">
+						<div class="fact">
+							<i class="fas fa-video"></i>
+							<h4>458 houres</h4>
+							<p>Video Recorded</p>
+						</div>
+					</div>
+				</div>	
 			</div>
 		</div>
 		<div class="team">
 			<h3>Meet our team!</h3>
 			<div class="container-fluid">
 				<div class="row">
-					<div class="col-lg-3">
+					<div class="col-lg-3 col-md-6">
 						<div class="person">
 							<div class="flip">
 								<div class="flip-front">
@@ -46,7 +99,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-3">
+					<div class="col-lg-3 col-md-6">
 						<div class="person">
 							<div class="flip">
 								<div class="flip-front">
@@ -61,7 +114,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-3">
+					<div class="col-lg-3 col-md-6">
 						<div class="person">
 							<div class="flip">
 								<div class="flip-front">
@@ -76,7 +129,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-3">
+					<div class="col-lg-3 col-md-6">
 						<div class="person">
 							<div class="flip">
 								<div class="flip-front">
@@ -94,44 +147,46 @@
 				</div>
 			</div>
 		</div>
-		<div class="facts">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-lg-3">
-						<div class="fact">
-							<i class="far fa-smile-beam"></i>
-							<h4>128</h4>
-							<p>Happy Clients</p>
-						</div>
-					</div>
-					<div class="col-lg-3">
-						<div class="fact">
-							<i class="fas fa-camera-retro"></i>
-							<h4>11,545</h4>
-							<p>Token Pictures</p>
-						</div>
-					</div>
-					<div class="col-lg-3">
-						<div class="fact">
-							<i class="fas fa-video"></i>
-							<h4>458 houres</h4>
-							<p>Video Recorded</p>
-						</div>
-					</div>
-				</div>
-				
-			</div>
-		</div>
 	</section>
 	<section class="gallery link-content" id="photos">
-		<h2>See some Our work!</h2>
+		<h2>See some our work!</h2>
 		<div class="container-fluid">		
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent at turpis eu mauris cursus semper. Aliquam fermentum sem in enim porta mollis. Nam id tortor eu justo rhoncus condimentum. Integer commodo ante sed lectus faucibus volutpat. Mauris nunc nisi, finibus sit amet vehicula et, finibus at ipsum. Nullam aliquam sem eget faucibus tincidunt.
-			</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent at turpis eu mauris cursus semper. Aliquam fermentum sem in enim porta mollis. Nam id tortor eu justo rhoncus condimentum.</p>
 			<div class="gallery_imgs">
 				<div class="container-fluid">
 					<div class="row">
-						
+						<div class="col-lg-4 col-md-6">
+							<div class="gallery-item">
+								<img src="images/bride.jpeg">
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6">
+							<div class="gallery-item">
+								<img src="images/couple.jpeg">
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6">
+							<div class="gallery-item">
+								<img src="images/groom&bride.jpeg">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-4 col-md-6">
+							<div class="gallery-item">
+								<img src="images/kid.jpeg">
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6">
+							<div class="gallery-item">
+								<img src="images/girl.jpeg">
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6">
+							<div class="gallery-item">
+								<img src="images/boy.jpeg">
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
