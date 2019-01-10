@@ -11,6 +11,10 @@
   display: none;
 }
 
+.container-fluid {
+  height: auto;
+}
+
 /** {
 	border: 1px solid black;
 }*/
@@ -18,7 +22,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Dosis', sans-serif;
-  background-image: url("/images/header2.jpeg");
+  background-image: url("/images/header.jpeg");
   height: 100vh;
   background-size: cover;
   background-position: top center;
@@ -33,10 +37,9 @@ header {
 
 header h1 {
   font-family: 'Tangerine', cursive;
-  font-size: 80px;
-  font-weight: 700;
+  font-size: 65px;
   color: #fff;
-  padding-top: 300px;
+  padding-top: 400px;
 }
 
 header i {
@@ -53,30 +56,27 @@ header i {
 }
 
 nav {
-  height: auto;
   margin: 0;
-  padding: 0;
+  padding: 20px;
   width: 100%;
-  text-align: center;
+  text-align: left;
   background-color: #fff;
-  height: 50px;
-  border-bottom: 1px solid #323031;
+  border-bottom: 1px solid #ccc;
 }
 
 nav button {
   display: inline-block;
-  font-size: 20px;
-  height: 100%;
+  font-size: 18px;
   color: #323031;
   background-color: inherit;
   border: none;
   outline: none;
   cursor: pointer;
-  margin-right: 20px;
+  margin: 0 10px;
 }
 
-nav button:hover {
-  background-color: #ccc;
+nav button.active {
+  border-bottom: 2px solid #DDCA7D;
 }
 
 nav button:focus {
@@ -100,9 +100,9 @@ nav button:focus {
 }
 
 .about .desc {
-  width: 800px;
-  margin: 0 auto 50px auto;
-  height: 65vh;
+  margin: 0 auto;
+  min-height: 65vh;
+  max-width: 80%;
 }
 
 .about .desc p {
@@ -120,6 +120,104 @@ nav button:focus {
 .about .desc .quote i {
   font-size: 40px;
   color: rgba(0, 0, 0, 0.5);
+}
+
+.about .offer {
+  background-color: #fff;
+  height: auto;
+  padding: 70px 0;
+}
+
+.about .offer h3 {
+  font-size: 35px;
+  color: #323031;
+  margin-bottom: 35px;
+}
+
+.about .offer .details {
+  margin: 0 auto;
+}
+
+.about .offer .details h4 {
+  font-size: 45px;
+  margin-bottom: 10px;
+  color: #323031;
+  font-family: 'Tangerine', cursive;
+}
+
+.about .offer .details h4 i {
+  color: #DDCA7D;
+  font-size: 30px;
+  margin-right: 5px;
+}
+
+.about .offer .details p {
+  font-size: 15px;
+  margin: 5px 0;
+  width: auto;
+}
+
+.about .offer .details p:last-of-type {
+  margin-bottom: 35px;
+}
+
+.about .offer .details span {
+  font-size: 40px;
+  font-family: 'Tangerine', cursive;
+  color: #323031;
+}
+
+.about .offer .offer_img {
+  margin: 35px auto;
+  position: relative;
+  min-height: 399px;
+  overflow: hidden;
+}
+
+.about .offer .offer_img .img_slides {
+  position: absolute;
+  transition: opacity .5s ease-in;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  max-width: 100%;
+  height: auto;
+  opacity: 0;
+}
+
+.about .facts {
+  height: auto;
+  background-image: url("/images/bg_forest.jpg");
+  padding: 30px;
+}
+
+.about .facts .fact {
+  width: auto;
+  height: 250px;
+  padding: 35px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about .facts .fact i {
+  font-size: 60px;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.about .facts .fact h4 {
+  font-size: 40px;
+  color: #DDCA7D;
+  font-weight: 700;
+}
+
+.about .facts .fact p {
+  font-size: 45px;
+  color: #fff;
+  margin: 0;
+  width: auto;
+  font-family: 'Tangerine', cursive;
 }
 
 .about .team {
@@ -140,6 +238,7 @@ nav button:focus {
   perspective: 1000px;
   background-color: transparent;
   border: 1px solid #323031;
+  border-radius: 10px;
   padding: 5px;
 }
 
@@ -165,12 +264,14 @@ nav button:focus {
 .about .team .person .flip-front img {
   width: 100%;
   height: 100%;
+  border-radius: 10px;
 }
 
 .about .team .person .flip-back {
   text-align: center;
   background-color: #323031;
   transform: rotateY(180deg);
+  border-radius: 10px;
 }
 
 .about .team .person .flip-back h4 {
@@ -183,7 +284,9 @@ nav button:focus {
   font-size: 15px;
   text-align: center;
   margin-top: 15px;
+  margin-bottom: 0;
   width: auto;
+  padding: 0;
 }
 
 .about .team .person .flip-back i {
@@ -194,94 +297,8 @@ nav button:focus {
 }
 
 .about .team .person .flip-back i:hover {
-  color: #323031;
   transform: scale(1.3);
-}
-
-.about .offer {
-  background-color: #fff;
-  height: auto;
-  padding: 0 0 60px 0;
-}
-
-.about .offer h3 {
-  font-size: 35px;
-  color: #323031;
-  margin-bottom: 35px;
-}
-
-.about .offer .details {
-  margin: 0 auto;
-}
-
-.about .offer .details h4 {
-  font-size: 25px;
-  margin-bottom: 10px;
-  color: #323031;
-}
-
-.about .offer .details p {
-  font-size: 17px;
-  margin: 5px 0;
-  width: auto;
-}
-
-.about .offer .details p:last-of-type {
-  margin-bottom: 35px;
-}
-
-.about .offer .details span {
-  font-size: 40px;
-  font-family: 'Tangerine', cursive;
-  color: #323031;
-}
-
-.about .offer .offer_img {
-  width: 600px;
-  height: 399px;
-  position: relative;
-}
-
-.about .offer .offer_img img {
-  position: absolute;
-  transition: opacity .5s ease-in;
-  left: 0;
-}
-
-.about .offer .offer_img img + img {
-  opacity: 0;
-}
-
-.about .facts {
-  height: 50vh;
-  background-image: url("/images/bg_forest.jpg");
-  padding: 30px;
-}
-
-.about .facts .fact {
-  width: 300px;
-  height: 250px;
-  padding: 35px;
-  margin: 0 auto;
-}
-
-.about .facts .fact i {
-  font-size: 60px;
-  color: #fff;
-  margin-bottom: 15px;
-}
-
-.about .facts .fact h4 {
-  font-size: 40px;
   color: #DDCA7D;
-  font-weight: 700;
-}
-
-.about .facts .fact p {
-  font-size: 30px;
-  color: #fff;
-  margin: 0;
-  width: auto;
 }
 
 .gallery {
@@ -298,7 +315,7 @@ nav button:focus {
 }
 
 .gallery p {
-  width: 600px;
+  max-width: 600px;
   margin: 0 auto;
 }
 
@@ -376,6 +393,66 @@ footer {
   height: 50px;
   line-height: 50px;
   color: #fff;
+}
+
+@media (max-width: 767px) {
+  nav {
+    text-align: center;
+  }
+  .about .desc {
+    height: auto;
+  }
+  .about .desc .quote p {
+    font-size: 35px;
+  }
+  .about .offer {
+    margin: 55px 0;
+    padding-bottom: 0;
+    padding-top: 0;
+    height: auto;
+  }
+  .about .offer .details {
+    padding: 0;
+  }
+  .about .offer .offer_img {
+    display: none;
+  }
+  .about .facts {
+    background-image: none;
+    background-color: #323031;
+  }
+  .about .team {
+    padding: 25px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .about .offer .offer_img {
+    margin-top: 50px;
+  }
+  .about .offer .offer_img .img_slides {
+    margin: 0 auto;
+  }
+  .about .facts {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .about .facts .fact i {
+    font-size: 55px;
+  }
+  .about .facts .fact h4 {
+    font-size: 35px;
+  }
+  .about .facts .fact p {
+    font-size: 25px;
+  }
+  .about .team .person {
+    margin: 15px auto;
+  }
+  .gallery .gallery_imgs .gallery-item {
+    width: 600px;
+    height: 399px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
