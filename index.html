@@ -153,40 +153,32 @@
 		<h2>See some our work!</h2>
 		<div class="container-fluid">		
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent at turpis eu mauris cursus semper. Aliquam fermentum sem in enim porta mollis. Nam id tortor eu justo rhoncus condimentum.</p>
+			<div class="modal" id="myModal">
+				<span class="close">x</span>
+				<img class="modal_content" id="img01" alt="modal">
+			</div>
 			<div class="gallery_imgs">
-				<div class="container-fluid">
+				<div class="container">
 					<div class="row">
-						<div class="col-lg-4 col-md-12">
-							<div class="gallery-item">
-								<img src="images/bride.jpeg">
-							</div>
+						<div class="col-lg-4">
+							<img src="images/bride.jpeg" class="img" alt="bride">
 						</div>
-						<div class="col-lg-4 col-md-12">
-							<div class="gallery-item">
-								<img src="images/groom.jpeg">
-							</div>
+						<div class="col-lg-4">
+							<img src="images/groom.jpeg" class="img" alt="groom">
 						</div>
-						<div class="col-lg-4 col-md-12">
-							<div class="gallery-item">
-								<img src="images/couple.jpeg">
-							</div>
+						<div class="col-lg-4">
+							<img src="images/couple.jpeg" class="img" alt="couple">
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-lg-4 col-md-12">
-							<div class="gallery-item">
-								<img src="images/shoes.jpeg">
-							</div>
+						<div class="col-lg-4">
+							<img src="images/shoes.jpeg" class="img" alt="shoes">
 						</div>
-						<div class="col-lg-4 col-md-12">
-							<div class="gallery-item">
-								<img src="images/kiss.jpeg">
-							</div>
+						<div class="col-lg-4">
+							<img src="images/groom&bride.jpeg" class="img" alt="groom&bride">
 						</div>
-						<div class="col-lg-4 col-md-12">
-							<div class="gallery-item">
-								<img src="images/groom&bride.jpeg">
-							</div>
+						<div class="col-lg-4">
+							<img src="images/kiss.jpeg" class="img" alt="kiss">
 						</div>
 					</div>
 				</div>
@@ -194,22 +186,33 @@
 		</div>
 	</section>
 	<section class="contact link-content" id="getInTouch">
-		<div class="container-fluid">
 			<h2>Get in touch with us!</h2>
-			<p>Phone: 445-854-789</p>
-			<p>Location: Salt Fake City, Merry Street 26</p>
-			<h3>In case of some questions write to us via form</h3>
-			<form>
-				<input type="text" placeholder="E-mail">
-				<input type="text" placeholder="Topic">
-				<textarea placeholder="What do you want to know?"></textarea>
-			</form>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-4 offset-lg-1 col-md-6 col-sm-12">
+						<div class="info">
+							<p><i class="fas fa-envelope"></i> photo-brand@.us</p>
+							<p><i class="fas fa-phone"></i> 445-854-789</p>
+							<p><i class="fas fa-map-marker-alt"></i> Salt Fake City, Merry Street 26</p>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-12">
+						<h3>Write to us!</h3>
+						<form>
+							<input type="text" placeholder="Name">
+							<input type="text" placeholder="E-mail">
+							<input type="text" placeholder="Topic" class="topic">
+							<textarea placeholder="What do you want to know?"></textarea>
+							<button type="submit">Send</button>
+						</form>
+					</div>
+				</div>
+			</div>
 			<div class="socials">
 				<i class="fab fa-facebook-f"></i>
 				<i class="fab fa-instagram"></i>
 				<i class="fab fa-pinterest-p"></i>
 			</div>
-		</div>
 	</section>
 	<footer>Copyright©JB2018</footer>
 	<script type="text/javascript" src="js/script.js"></script>

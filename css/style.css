@@ -12,7 +12,17 @@
 }
 
 .container-fluid {
-  height: auto;
+  padding: 0;
+}
+
+[class*="col-"] {
+  padding: 0;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
 /** {
@@ -37,6 +47,7 @@ header {
 
 header h1 {
   font-family: 'Tangerine', cursive;
+  font-size: 55px;
   font-size: 65px;
   color: #fff;
   padding-top: 400px;
@@ -96,13 +107,15 @@ nav button:focus {
   margin: 0;
   padding: 15px;
   color: #323031;
-  font-size: 35px;
+  font-family: 'Tangerine', cursive;
+  font-size: 55px;
 }
 
 .about .desc {
   margin: 0 auto;
   min-height: 65vh;
   max-width: 80%;
+  border-bottom: 1px solid #bbb;
 }
 
 .about .desc p {
@@ -111,8 +124,8 @@ nav button:focus {
 }
 
 .about .desc .quote p {
-  font-size: 55px;
   font-family: 'Tangerine', cursive;
+  font-size: 55px;
   color: rgba(0, 0, 0, 0.7);
   margin-top: 55px;
 }
@@ -129,7 +142,8 @@ nav button:focus {
 }
 
 .about .offer h3 {
-  font-size: 35px;
+  font-family: 'Tangerine', cursive;
+  font-size: 55px;
   color: #323031;
   margin-bottom: 35px;
 }
@@ -139,10 +153,11 @@ nav button:focus {
 }
 
 .about .offer .details h4 {
+  font-family: 'Tangerine', cursive;
+  font-size: 55px;
   font-size: 45px;
   margin-bottom: 10px;
   color: #323031;
-  font-family: 'Tangerine', cursive;
 }
 
 .about .offer .details h4 i {
@@ -162,9 +177,10 @@ nav button:focus {
 }
 
 .about .offer .details span {
-  font-size: 40px;
   font-family: 'Tangerine', cursive;
+  font-size: 55px;
   color: #323031;
+  font-size: 45px;
 }
 
 .about .offer .offer_img {
@@ -213,22 +229,25 @@ nav button:focus {
 }
 
 .about .facts .fact p {
+  font-family: 'Tangerine', cursive;
+  font-size: 55px;
   font-size: 45px;
   color: #fff;
   margin: 0;
   width: auto;
-  font-family: 'Tangerine', cursive;
 }
 
 .about .team {
   padding: 50px;
   background-color: #fff;
+  min-height: 80vh;
 }
 
 .about .team h3 {
-  margin-bottom: 35px;
+  font-family: 'Tangerine', cursive;
+  font-size: 55px;
+  margin-bottom: 55px;
   color: #323031;
-  font-size: 30px;
 }
 
 .about .team .person {
@@ -237,7 +256,6 @@ nav button:focus {
   margin: 0 auto;
   perspective: 1000px;
   background-color: transparent;
-  border: 1px solid #323031;
   border-radius: 10px;
   padding: 5px;
 }
@@ -312,6 +330,8 @@ nav button:focus {
 .gallery h2 {
   margin: 0;
   padding: 15px;
+  font-family: 'Tangerine', cursive;
+  font-size: 55px;
 }
 
 .gallery p {
@@ -319,19 +339,63 @@ nav button:focus {
   margin: 0 auto;
 }
 
-.gallery .gallery_imgs {
-  margin: 50px 0;
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
-.gallery .gallery_imgs .gallery-item {
-  width: 300px;
-  height: 210px;
-  margin: 25px auto;
-}
-
-.gallery .gallery_imgs .gallery-item img {
+.gallery .modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.gallery .modal .modal_content {
+  margin: 85px auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  animation-name: zoom;
+  animation-duration: .3s;
+}
+
+.gallery .modal .close {
+  position: absolute;
+  top: 45px;
+  right: 60px;
+  color: #fff;
+  font-size: 45px;
+}
+
+.gallery .modal .close:hover {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.gallery .gallery_imgs {
+  padding: 30px;
+}
+
+.gallery .gallery_imgs img {
+  width: 300px;
+  height: 210px;
+  margin: 25px;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.gallery .gallery_imgs img:hover {
+  opacity: .7;
 }
 
 .contact {
@@ -344,36 +408,73 @@ nav button:focus {
 
 .contact h2 {
   color: #323031;
-  font-size: 35px;
-  margin-bottom: 20px;
+  font-family: 'Tangerine', cursive;
+  font-size: 55px;
+  margin-bottom: 50px;
 }
 
-.contact p {
+.contact .info {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.contact .info p {
   font-size: 20px;
-  margin-bottom: 25px;
+  text-align: left;
+}
+
+.contact .info p i {
+  font-size: 20px;
+  color: #DDCA7D;
 }
 
 .contact h3 {
-  font-size: 30px;
-  margin-bottom: 50px;
+  font-size: 20px;
 }
 
-.contact form {
-  margin-bottom: 50px;
-}
-
-.contact form input, .contact form textarea {
+.contact form input {
   display: block;
   margin: 20px auto;
   text-align: center;
-  width: 300px;
+  width: 200px;
   border: none;
+  border-bottom: 1px solid #bbb;
+}
+
+.contact form input:focus {
+  outline: none;
   border-bottom: 1px solid #323031;
 }
 
-.contact form input:focus, .contact form textarea:focus {
+.contact form input.topic {
+  max-width: 350px;
+}
+
+.contact form textarea {
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  width: 350px;
+  border: none;
+  border-bottom: 1px solid #bbb;
+}
+
+.contact form textarea:focus {
   outline: none;
   border-bottom: 1px solid #323031;
+}
+
+.contact form button {
+  background-color: #323031;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 15px;
+  color: #fff;
+  border: none;
+}
+
+.contact form button:hover {
+  background-color: #DDCA7D;
 }
 
 .contact .socials i {
@@ -385,6 +486,7 @@ nav button:focus {
 
 .contact .socials i:hover {
   transform: scale(1.3);
+  color: #DDCA7D;
 }
 
 footer {
@@ -424,6 +526,37 @@ footer {
   .about .team {
     padding: 25px;
   }
+  .about .team .person {
+    margin-bottom: 25px;
+  }
+  .gallery {
+    padding: 50px 0;
+  }
+  .gallery .gallery_imgs {
+    padding: 55px 0;
+  }
+  .gallery .gallery_imgs img {
+    pointer-events: none;
+    margin: 15px auto;
+    width: 290px;
+    height: 199px;
+  }
+  .contact h3 {
+    padding-right: 0;
+  }
+  .contact form {
+    padding-right: 15px;
+    margin-bottom: 80px;
+  }
+  .contact form input {
+    margin: 25px auto;
+  }
+  .contact form textarea {
+    max-width: 200px;
+  }
+  .contact .info {
+    padding: 55px 15px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
@@ -449,9 +582,14 @@ footer {
   .about .team .person {
     margin: 15px auto;
   }
-  .gallery .gallery_imgs .gallery-item {
+  .gallery .modal_content span {
+    top: 25px;
+    right: 25px;
+  }
+  .gallery .gallery_imgs img {
     width: 600px;
     height: 399px;
+    pointer-events: none;
   }
 }
 
