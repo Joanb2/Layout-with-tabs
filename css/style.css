@@ -29,7 +29,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Dosis', sans-serif;
-  background-image: url("/images/header.jpeg");
+  background-image: url("https://images.pexels.com/photos/1455392/pexels-photo-1455392.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
   height: 100vh;
   background-size: cover;
   background-position: top center;
