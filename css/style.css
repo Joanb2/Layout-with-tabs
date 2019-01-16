@@ -200,8 +200,8 @@ nav button:focus {
 }
 
 .about .facts {
-  height: auto;
-  background-image: url("/images/bg_forest.jpg");
+  max-height: 50vh;
+  background-image: url("https://images.pexels.com/photos/113338/pexels-photo-113338.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
   padding: 30px;
 }
 
