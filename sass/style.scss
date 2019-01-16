@@ -43,9 +43,6 @@ $accent_color: #DDCA7D;
   display: table;
 }
 
-/** {
-	border: 1px solid black;
-}*/
 
 body {
 	margin: 0;
@@ -137,7 +134,7 @@ nav {
 		border-bottom: 1px solid #bbb;
 
 		p {
-			margin: 0 auto;
+			margin: 10px auto;
 			font-size: 18px;
 		}
 
@@ -172,7 +169,7 @@ nav {
 			h4 {
 				@include accent_font;
 				font-size: 45px;
-				margin-bottom: 10px;
+				margin-bottom: 5px;
 				color: $basic_color;
 
 				i {
@@ -185,7 +182,7 @@ nav {
 
 			p {
 				font-size: 15px;
-				margin: 5px 0;
+				margin: 0 0 30px 0;
 				width: auto;
 				&:last-of-type {
 					margin-bottom: 35px;
@@ -230,7 +227,7 @@ nav {
 
 		.fact {
 			width: auto;
-			height: 250px;
+			min-height: 250px;
 			padding: 35px;
 			margin: 0 auto;
 			text-align: center;
@@ -358,6 +355,7 @@ nav {
 	p {
 		max-width: 600px;
 		margin: 0 auto;
+		font-size: 20px;
 	}
 
 	@keyframes zoom {
@@ -424,21 +422,24 @@ nav {
 //Contact section
 
 .contact {
+
 	@include section_params;
 
 	h2 {
 		color: $basic_color;
 		@include accent_font;
-		margin-bottom: 50px;
+		padding: 15px;
+		margin: 0;
 	}
 
 	.info {
 		max-width: 400px;
-		margin: 0 auto;
+		padding: 100px 50px;
 
 		p {
 			font-size: 20px;
 			text-align: left;
+			padding: 10px;
 
 			i {
 				font-size: 20px;
@@ -448,6 +449,7 @@ nav {
 	}
 
 	h3 {
+		margin-top: 45px;
 		font-size: 20px;
 	}
 
@@ -496,6 +498,7 @@ nav {
 	}
 
 	.socials {
+		margin-top: 50px;
 		i {
 			font-size: 35px;
 			color: $basic_color;
@@ -507,6 +510,7 @@ nav {
 			}
 		}
 	}
+
 }
 
 
@@ -526,26 +530,36 @@ footer {
 @media(max-width: 767px) {
 	nav {
 		text-align: center;
+		padding: 20px 0;
 	}
 
 	.about {
 
 		.desc {
 			height: auto;
+			max-width: 100%;
+			padding-right: 10px;
+			padding-left: 10px;
 
 			.quote p {
 				font-size: 35px;
+				margin-bottom: 55px;
 			}
 		}
 
 		.offer {
 			margin: 55px 0;
-			padding-bottom: 0;
-			padding-top: 0;
+			padding: 0 15px;
 			height: auto;
 
 			.details {
 				padding: 0;
+
+				h4 {
+					font-size: 40px;
+				}
+
+
 			}
 
 			.offer_img {
@@ -557,6 +571,7 @@ footer {
 		.facts {
 			background-image: none;
 			background-color: $basic_color;
+			height: auto;
 		}
 
 		.team {
@@ -570,19 +585,24 @@ footer {
 
 	.gallery {
 		padding: 50px 0;
+
+		p {
+			font-size: 18px;
+		}
 		
 		.gallery_imgs {
 			padding: 55px 0;
 			img {
 				pointer-events: none;
 				margin: 15px auto;
-				width: 290px;
-				height: 199px;
+				width: 270px;
+				height: 180px;
 			}
 		}
 	}
 
 	.contact {
+		padding: 50px 10px;
 
 		h3 {
 			padding-right: 0;
@@ -603,6 +623,13 @@ footer {
 
 		.info {
 			padding: 55px 15px;
+			max-width: 100%;
+
+			p {
+				font-size: 18px;
+				text-align: center;
+
+			}
 		}
 	}
 
@@ -612,6 +639,7 @@ footer {
 	.about {
 
 		.offer {
+
 			.offer_img {
 				margin-top: 50px;
 
@@ -624,8 +652,11 @@ footer {
 		.facts {
 			padding-left: 0;
 			padding-right: 0;
+			overflow: hidden;
 
 			.fact {
+				padding-left: 0;
+				padding-right: 0;
 
 				i {
 					font-size: 55px;
@@ -636,7 +667,7 @@ footer {
 				}
 
 				p {
-					font-size: 25px;
+					font-size: 45px;
 				}
 
 			}
@@ -665,16 +696,7 @@ footer {
 				height: 399px;
 				pointer-events: none;
 			}
-
-
 		}
 	}
 
-	.contact {
-		form {
-			textarea {
-
-			}
-		}
-	}
 }

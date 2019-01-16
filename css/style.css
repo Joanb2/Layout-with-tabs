@@ -25,9 +25,6 @@
   display: table;
 }
 
-/** {
-	border: 1px solid black;
-}*/
 body {
   margin: 0;
   padding: 0;
@@ -119,7 +116,7 @@ nav button:focus {
 }
 
 .about .desc p {
-  margin: 0 auto;
+  margin: 10px auto;
   font-size: 18px;
 }
 
@@ -156,7 +153,7 @@ nav button:focus {
   font-family: 'Tangerine', cursive;
   font-size: 55px;
   font-size: 45px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   color: #323031;
 }
 
@@ -168,7 +165,7 @@ nav button:focus {
 
 .about .offer .details p {
   font-size: 15px;
-  margin: 5px 0;
+  margin: 0 0 30px 0;
   width: auto;
 }
 
@@ -210,7 +207,7 @@ nav button:focus {
 
 .about .facts .fact {
   width: auto;
-  height: 250px;
+  min-height: 250px;
   padding: 35px;
   margin: 0 auto;
   text-align: center;
@@ -337,6 +334,7 @@ nav button:focus {
 .gallery p {
   max-width: 600px;
   margin: 0 auto;
+  font-size: 20px;
 }
 
 @keyframes zoom {
@@ -410,17 +408,19 @@ nav button:focus {
   color: #323031;
   font-family: 'Tangerine', cursive;
   font-size: 55px;
-  margin-bottom: 50px;
+  padding: 15px;
+  margin: 0;
 }
 
 .contact .info {
   max-width: 400px;
-  margin: 0 auto;
+  padding: 100px 50px;
 }
 
 .contact .info p {
   font-size: 20px;
   text-align: left;
+  padding: 10px;
 }
 
 .contact .info p i {
@@ -429,6 +429,7 @@ nav button:focus {
 }
 
 .contact h3 {
+  margin-top: 45px;
   font-size: 20px;
 }
 
@@ -477,6 +478,10 @@ nav button:focus {
   background-color: #DDCA7D;
 }
 
+.contact .socials {
+  margin-top: 50px;
+}
+
 .contact .socials i {
   font-size: 35px;
   color: #323031;
@@ -500,21 +505,28 @@ footer {
 @media (max-width: 767px) {
   nav {
     text-align: center;
+    padding: 20px 0;
   }
   .about .desc {
     height: auto;
+    max-width: 100%;
+    padding-right: 10px;
+    padding-left: 10px;
   }
   .about .desc .quote p {
     font-size: 35px;
+    margin-bottom: 55px;
   }
   .about .offer {
     margin: 55px 0;
-    padding-bottom: 0;
-    padding-top: 0;
+    padding: 0 15px;
     height: auto;
   }
   .about .offer .details {
     padding: 0;
+  }
+  .about .offer .details h4 {
+    font-size: 40px;
   }
   .about .offer .offer_img {
     display: none;
@@ -522,6 +534,7 @@ footer {
   .about .facts {
     background-image: none;
     background-color: #323031;
+    height: auto;
   }
   .about .team {
     padding: 25px;
@@ -532,14 +545,20 @@ footer {
   .gallery {
     padding: 50px 0;
   }
+  .gallery p {
+    font-size: 18px;
+  }
   .gallery .gallery_imgs {
     padding: 55px 0;
   }
   .gallery .gallery_imgs img {
     pointer-events: none;
     margin: 15px auto;
-    width: 290px;
-    height: 199px;
+    width: 270px;
+    height: 180px;
+  }
+  .contact {
+    padding: 50px 10px;
   }
   .contact h3 {
     padding-right: 0;
@@ -556,6 +575,11 @@ footer {
   }
   .contact .info {
     padding: 55px 15px;
+    max-width: 100%;
+  }
+  .contact .info p {
+    font-size: 18px;
+    text-align: center;
   }
 }
 
@@ -569,6 +593,11 @@ footer {
   .about .facts {
     padding-left: 0;
     padding-right: 0;
+    overflow: hidden;
+  }
+  .about .facts .fact {
+    padding-left: 0;
+    padding-right: 0;
   }
   .about .facts .fact i {
     font-size: 55px;
@@ -577,7 +606,7 @@ footer {
     font-size: 35px;
   }
   .about .facts .fact p {
-    font-size: 25px;
+    font-size: 45px;
   }
   .about .team .person {
     margin: 15px auto;
